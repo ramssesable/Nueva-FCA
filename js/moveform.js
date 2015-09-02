@@ -1,6 +1,6 @@
 /*
  * Moves the comments form beneath the reponding post
- * No need to include in the wordpress version
+ * No need to include in the WORDPRESS VERSION
  *
 */
 
