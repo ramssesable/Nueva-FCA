@@ -139,8 +139,9 @@
 <a style="display:scroll; position:fixed; bottom:10px; right:80px;" href="#" title="Volver arriba"><img src="https://lh6.googleusercontent.com/--o4LqmhRiJA/U-CDrX0wmZI/AAAAAAAAFZc/OKM6ANlJe5M/h240/up.png" /></a>
 		<script type="text/javascript" language="javascript">
 			$(document).ready(function() {
-				$("#header").load("http://localhost/Nueva-FCA/header.html");
-				$("#footer").load("footer.html");
+				var location = window.location.origin;
+				$("#header").load(location+"/Nueva-FCA/header.html");
+				$("#footer").load(location+"/Nueva-FCA/footer.html");
 			});
 		</script>					
 	</body>
