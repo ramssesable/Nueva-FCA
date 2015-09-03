@@ -38,6 +38,8 @@ body{
 
 body p{
 	margin-bottom: 21px;
+}
+p .negro{
 	color: #000000;
 }
 

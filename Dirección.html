@@ -66,7 +66,26 @@
 	</head>
 	
 	<body lang="en">
-	<div id="header"></div>
+		<header class="clearfix">
+
+			<!-- top widget -->
+			<div id="top-widget-holder">
+				<div class="wrapper">
+					<div id="top-widget">
+						<div id="anuncios" class="padding"></div> <!-- Se cargara los anuncios desde el archivo anuncios.html -->
+					</div>
+				</div>
+				<a href="#" id="top-open">Menu</a>
+			</div>
+			<!-- ENDS top-widget -->
+
+			<div class="wrapper clearfix">
+				<!-- el nombre es una foto-->
+				<a href="index.html" id="logo"><img  src="http://fca.mxl.uabc.mx/facultad/resources/img/logo.png" alt="FCA"></a>
+				<div id="menu"></div><!-- Se cargara el menu desde el archivo menu.html -->
+			</div>
+		</header>
+		
 		<!-- MAIN -->
 		<div id="main">	
 			<div class="wrapper clearfix">
@@ -170,9 +189,10 @@
 <a style="display:scroll; position:fixed; bottom:10px; right:80px;" href="#" title="Volver arriba"><img src="https://lh6.googleusercontent.com/--o4LqmhRiJA/U-CDrX0wmZI/AAAAAAAAFZc/OKM6ANlJe5M/h240/up.png" /></a>
 		<script type="text/javascript" language="javascript">
 			$(document).ready(function() {
-				var location = window.location.origin;
-				$("#header").load(location+"/Nueva-FCA/header.html");
-				$("#footer").load(location+"/Nueva-FCA/footer.html");
+				$location = window.location.origin;
+				$("#anuncios").load($location+"/Nueva-FCA/anuncios.html"); //Carga los anuncios desde el archivo anuncios.html
+				$("#menu").load($location+"/Nueva-FCA/menu.html"); //Carga el menu desde el archivo menu.html
+				$("#footer").load($location+"/Nueva-FCA/footer.html"); //Carga el footer desde el archivo footer.html
 			});
 		</script>					
 	</body>
