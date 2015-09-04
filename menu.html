@@ -1,5 +1,6 @@
 <nav>
 	<ul id="nav" class="sf-menu">
+<<<<<<< HEAD
 		<li class="current-menu-item"><a id="principal" href=""></a></li>
 		<li><a href="" id="institucional">Institucional</a>
 		<ul>
@@ -22,6 +23,12 @@
 				<li><a href="#">Licenciado en Gestión Turística</a></li>
 				<li><a href="#">Tronco Común</a></li>
 			</ul>
+=======
+		<li class="current-menu-item"><a id="principal" ></a></li>
+		<li><a id="institucional" href="Institucional.html"></a></li>
+		<li id="licenciaturas"><a href>Licenciaturas</a>
+			
+>>>>>>> origin/master
 		</li>
 		<li><a href="">Programas de Apoyo</a></li>
 		<li><a href="">Academico</a></li>
@@ -32,7 +39,37 @@
 </nav>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("#principal").attr("href",$location+"/Nueva-FCA").html("Principal");
-		$("#institucional").attr("href",$location+"/Nueva-FCA/Cp-institucional/index.html").html("Institucional");
+		$("#principal").attr("href",$location+"/Nueva-FCA").html("Principal"); //Pagina principal
+		$("#institucional").attr("href",$location+"/Nueva-FCA/Cp-institucional/index.html").html("Institucional"); //Seccion institucional
+
+		crearSubMenuLicenciaturas()
 	});
+	function crearSubMenuLicenciaturas() {
+		//Seccion licenciaturas
+		var $listaLicenciaturas = $("<ul/>");// se guarda la lista en la variable
+
+		var $licenciatura 		= $("<li/>");// se guarda un renglon en la variable
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/Contaduría.html").html("Licenciado en contadur&iacute;a").appendTo($licenciatura); // se guarda el enlace en la variable y se pasa a el renglon
+		$licenciatura.appendTo($listaLicenciaturas);// Se pasa el renglon a la lista
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/administracion.html").html("Licenciado en Administraci&oacute;n de Empresas").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/informatica.html").html("Licenciado en Inform&aacute;atica").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/mercadotecnia.html").html("Licenciado en Mercadotecnia").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/negocio.html").html("Licenciado en Negocios Internacionales").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/gestonTuristica.html").html("Licenciado en Gesti&oacute;n Tur&iacute;stica").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+		var $licenciatura 		= $("<li/>");
+		var $_licenciatura		= $("<a/>").attr("href",$location+"Nueva-FCA/licenciaturas/troncoComun.html").html("Tronco Com&uacute;n").appendTo($licenciatura);
+		$licenciatura.appendTo($listaLicenciaturas);
+
+		$listaLicenciaturas.appendTo("#licenciaturas");//se pasa la lista al menu
+	}
 </script>
