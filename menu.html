@@ -1,19 +1,10 @@
 <nav>
 	<ul id="nav" class="sf-menu">
 		<li class="current-menu-item"><a id="principal" ></a></li>
-		<li><a id="institucional" ></a>
-			<ul>
-                <li class="cat-item"><a href="Dirección.html" title="View all posts">> Dirección</a></li>
-				<li class="cat-item"><a href="Subdirector.html" title="View all posts">> Subdirección</a></li>
-				<li class="cat-item"><a href="Administracion.html" title="View all posts">> Administración</a></li>
-				<li class="cat-item"><a href="../Documentos/ORGANIGRAMA.pdf" title="View all posts">> Organigrama </a></li>
-				<li class="cat-item"><a href="ManualdeFunciones.html" title="View all posts">> Manual de Funciones</a></li>
-				<li class="cat-item"><a href="PlandeDesarrolloInstitucional.html" title="View all posts">> Plan de Desarrollo Institucional 2015-2019</a></li>
-				<li class="cat-item"><a href="http://www.uabc.mx/formacionbasica/modeloedu.htm" title="View all posts">> Modelo educativo</a></li>
-				<li class="cat-item"><a href="Curriculums.html" title="View all posts">> Durriculums Directivos</a></li>
-			</ul>
+		<li id="institucional"><!-- Recibe datos de funcion crearSubMenuInstitucional -->
+
 		</li>
-		<li id="licenciaturas"><a href>Licenciaturas</a>
+		<li id="licenciaturas"><a href>Licenciaturas</a> <!-- Recibe datos de funcion crearSubMenuLicenciaturas -->
 
 		</li>
 		<li><a href="">Programas de Apoyo</a></li>
@@ -26,36 +17,70 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#principal").attr("href",$location+"/Nueva-FCA").html("Principal"); //Pagina principal
-		$("#institucional").attr("href",$location+"/Nueva-FCA/Cp-institucional/index.html").html("Institucional"); //Seccion institucional
-
+		
+		crearSubMenuInstitucional()
 		crearSubMenuLicenciaturas()
 	});
 	function crearSubMenuLicenciaturas() {
 		//Seccion licenciaturas
 		var $listaLicenciaturas = $("<ul/>");// se guarda la lista en la variable
 
-		var $licenciatura 		= $("<li/>");// se guarda un renglon en la variable
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/contaduria.html").html("> Licenciado en contadur&iacute;a").appendTo($licenciatura); // se guarda el enlace en la variable y se pasa a el renglon
-		$licenciatura.appendTo($listaLicenciaturas);// Se pasa el renglon a la lista
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/administracion.html").html("> Licenciado en Administraci&oacute;n de Empresas").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/informatica.html").html("> Licenciado en Inform&aacute;atica").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/mercadotecnia.html").html("> Licenciado en Mercadotecnia").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/negocio.html").html("> Licenciado en Negocios Internacionales").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/gestonTuristica.html").html("> Licenciado en Gesti&oacute;n Tur&iacute;stica").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
-		var $licenciatura 		= $("<li/>");
-		var $_licenciatura		= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/troncoComun.html").html("> Tronco Com&uacute;n").appendTo($licenciatura);
-		$licenciatura.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");// se guarda un renglon en la variable
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/contaduria.html").html("> Licenciado en contadur&iacute;a").appendTo($renglon); // se guarda el enlace en la variable y se pasa a el renglon
+		$renglon.appendTo($listaLicenciaturas);// Se pasa el renglon a la lista
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/administracion.html").html("> Licenciado en Administraci&oacute;n de Empresas").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/informatica.html").html("> Licenciado en Inform&aacute;atica").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/mercadotecnia.html").html("> Licenciado en Mercadotecnia").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/negocio.html").html("> Licenciado en Negocios Internacionales").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/gestonTuristica.html").html("> Licenciado en Gesti&oacute;n Tur&iacute;stica").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/licenciaturas/troncoComun.html").html("> Tronco Com&uacute;n").appendTo($renglon);
+		$renglon.appendTo($listaLicenciaturas);
 
 		$listaLicenciaturas.appendTo("#licenciaturas");//se pasa la lista al menu
+	}
+
+	function crearSubMenuInstitucional() {
+		var $encabezadoMenu 	= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/").html("Institucional").appendTo("#institucional");
+
+		//Seccion intitucional
+		var $listaInstitucional = $("<ul/>");// se guarda la lista en la variable
+
+		var $renglon 			= $("<li/>");// se guarda un renglon en la variable
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/direccion.html").html("> Direcci&oacute;n").appendTo($renglon); // se guarda el enlace en la variable y se pasa a el renglon
+		$renglon.appendTo($listaInstitucional);// Se pasa el renglon a la lista
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/subdireccion.html").html("> Subdirecci&oacute;n").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/administracion.html").html("> Administraci&oacute;n").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/organigrama.html").html("> Organigrama").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/manualDeFunciones.html").html("> Manual de Funciones").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/planDeDesarrolloInstitucional.html").html("> Plan de Desarrollo Institucional 2015-2019").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href","http://www.uabc.mx/formacionbasica/modeloedu.htm").html("> Modelo educativo").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/curriculums.html").html("> Curriculums Directivos").appendTo($renglon);
+		$renglon.appendTo($listaInstitucional);
+
+		$listaInstitucional.appendTo("#institucional");//se pasa la lista al menu
 	}
 </script>
