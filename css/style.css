@@ -79,6 +79,8 @@ h5{ font-size: 18px; }
 
 h6{ font-size: 14px; }
 
+hbold{ font-size: 10pt; font-weight: bold } /* Agrege etiqueta hbold */
+
 #main,
 footer,
 aside{ line-height: 1.5em; }

@@ -19,7 +19,7 @@ body a:hover,
 	color: #43ac6a;
 }
 
-h1,h2,h3,h4,h5,h6{ color: #43ac6a; }
+h1,h2,h3,h4,h5,h6,hbold{ color: #43ac6a; } /* Agrege etiqueta hbold */
 
 /* Selection colours (easy to forget) */
 
