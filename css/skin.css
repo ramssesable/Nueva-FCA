@@ -28,10 +28,12 @@ h1,h2,h3,h4,h5,h6,hbold{ color: #43ac6a; } /* Agrege etiqueta hbold */
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: #43ac6a;}
-
 /* HEADER ------------------------------------------------------------*/
 
-header{ background: #43ac6a  bottom left repeat-x; }
+header{ 
+
+background: -webkit-linear-gradient(#1d4932, #097544);
+ }
 
 
 /* WIDGETS------------------------------------------------*/
