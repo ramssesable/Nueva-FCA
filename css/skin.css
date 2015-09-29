@@ -16,21 +16,21 @@ body a:hover,
 #top-widget-holder a:hover,
 #nav>li>a:hover,
 .project-heading .launch:hover{
-	color: #43ac6a;
+	color: #0A7444;
 }
 
-h1,h2,h3,h4,h5,h6,hbold{ color: #43ac6a; } /* Agrege etiqueta hbold */
+h1,h2,h3,h4,h5,h6,hbold{ color: #0A7444; } /* Agrege etiqueta hbold */
 
 /* Selection colours (easy to forget) */
 
-::selection 	 	{background: #43ac6a; color: #fff; }
-::-moz-selection 	{background: #43ac6a; color: #fff; }
+::selection 	 	{background: #0A7444; color: #fff; }
+::-moz-selection 	{background: #0A7444; color: #fff; }
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
-body {-webkit-tap-highlight-color: #43ac6a;}
+body {-webkit-tap-highlight-color: #0A7444;}
 /* HEADER ------------------------------------------------------------*/
 
-header{ 
+header { 
 
 background: -webkit-linear-gradient(#1d4932, #097544);
  }
@@ -68,7 +68,7 @@ nav a{ color: #E2E0D7; }
 
 #nav>li ul li a:hover,
 #nav>li ul li:nth-child(even) a:hover{
-	background: #43ac6a;
+	background: #0A7444;
 	color: #fff;
 }
 
@@ -97,14 +97,14 @@ nav a{ color: #E2E0D7; }
 /* HOME ------------------------------------------------------------*/
 
 .home-block figcaption{
-	background: #43ac6a;
+	background: #0A7444;
 	color: #f1f1f1;
 }
 
 /* PORTFOLIO ------------------------------------------------------------*/
 
 .portfolio-thumbs figcaption{
-	background: #43ac6a;
+	background: #0A7444;
 	color: #f1f1f1;
 }
 
@@ -116,7 +116,7 @@ nav a{ color: #E2E0D7; }
 
 .project-pager a{ color: #444; }
 
-.project-pager a:hover{ 	color: #43ac6a; }
+.project-pager a:hover{ 	color: #0A7444; }
 
 /* RELATED PROJECTS ---------------------------------------------------*/
 
