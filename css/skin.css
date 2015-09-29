@@ -30,7 +30,16 @@ img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: #0A7444;}
 /* HEADER ------------------------------------------------------------*/
 
-header{ background: -webkit-linear-gradient(#1d4932, #097544); }
+header{ 
+	background: #1d4932; /* Old browsers */
+	background: -moz-linear-gradient(top, #1d4932 0%, #097544 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1d4932), color-stop(100%,#097544)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1d4932 0%,#097544 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1d4932 0%,#097544 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1d4932 0%,#097544 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1d4932 0%,#097544 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d4932', endColorstr='#097544',GradientType=0 ); 
+}
 
 
 /* WIDGETS------------------------------------------------*/
