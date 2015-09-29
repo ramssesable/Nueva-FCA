@@ -30,10 +30,7 @@ img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: #43ac6a;}
 /* HEADER ------------------------------------------------------------*/
 
-header{ 
-
-background: -webkit-linear-gradient(#1d4932, #097544);
- }
+header{ background: -webkit-linear-gradient(#1d4932, #097544); }
 
 
 /* WIDGETS------------------------------------------------*/
