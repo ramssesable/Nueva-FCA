@@ -13,15 +13,15 @@
 						</div>
 					</div>
 					<div class="recent-post">
-						<a href="#" class="thumb"><img src="../img/dummies/reloc.png" alt="Horarios" /></a>
+						<a id="horarios" href="#" class="thumb"><img id="horariosImg" alt="Horarios" /></a>
 						<div class="post-head">
-							<a href="#">Horarios 2015-2</a>
+							<a id="horariosHead" href="#">Horarios 2015-2</a>
 						</div>
 					</div>
 					<div class="recent-post">
-						<a href="../Documentos/convo2015-1.pdf" class="thumb"><img src="../img/dummies/inter.png" alt="Intersemestrales" /></a>
+						<a id="inter" class="thumb"><img id="interImg" alt="Intersemestrales" /></a>
 						<div class="post-head">
-							<a href="../Documentos/convo2015-1.pdf">Intersemestrales</a>
+							<a id="interHead">Intersemestrales</a>
 						</div>
 					</div>
 				</div>
@@ -32,19 +32,19 @@
 				<div class="widget-block">
 					<h4>Enlaces Docentes</h4>
 					<div class="recent-post">
-						<a href="http://tutorias.uabc.mx:8080/login.php" class="thumb"><img src="../img/dummies/tutorias.png" alt="Sistema de Tutorias" /></a>
+						<a href="http://tutorias.uabc.mx:8080/login.php" class="thumb"><img id="tutoriasImg" alt="Sistema de Tutorias" /></a>
 						<div class="post-head">
 							<a href="http://tutorias.uabc.mx:8080/login.php">Sistema de Tutorias</a>
 						</div>
                         </div>
 						<div class="recent-post">
-						<a href="http://flexible.mxl.uabc.mx/" class="thumb"><img src="../img/dummies/flexible.png" alt="Portal Flexible" /></a>
+						<a href="http://flexible.mxl.uabc.mx/" class="thumb"><img id="flexibleImg" alt="Portal Flexible" /></a>
 						<div class="post-head">
 							<a href="http://flexible.mxl.uabc.mx/">Portal Flexible</a>
 						</div>
 						</div>
 						<div class="recent-post">
-						<a href="https://academicos.uabc.mx/" class="thumb"><img src="../img/dummies/docentes.png" alt="Portal Académico" /></a>
+						<a href="https://academicos.uabc.mx/" class="thumb"><img id="academicoImg" alt="Portal Académico" /></a>
 						<div class="post-head">
 							<a href="https://academicos.uabc.mx/">Portal Académico</a>
 						</div>
@@ -58,21 +58,21 @@
 					<div id="tweets" class="footer-col tweet">
          				<h4>Otras Coordinaciones</h4>
          				<div class="recent-post">
-						<a href="https://www.facebook.com/difusioneimagenfca?fref=ts" class="thumb"><img src="../img/dummies/difucion.png" alt="Difusión e´Imagen" /></a>
+						<a href="https://www.facebook.com/difusioneimagenfca?fref=ts" class="thumb"><img id="difusionImg" alt="Difusión e´Imagen" /></a>
 						<div class="post-head">
 							<a href="https://www.facebook.com/difusioneimagenfca?fref=ts">Difusion e imagen</a>
 						</div>
                         </div>
 						<div class="recent-post">
-						<a href="#" class="thumb"><img src="../img/dummies/cultura.png" alt="Actividades Culturales" /></a>
+						<a id="cultural "href="#" class="thumb"><img id="culturalImg" alt="Actividades Culturales" /></a>
 						<div class="post-head">
-							<a href="#">Actividades Culturales</a>
+							<a id="culturalHead" href="#">Actividades Culturales</a>
 						</div>
 						</div>
 						<div class="recent-post">
-						<a href="..\intercambio\index.html" class="thumb"><img src="../img/dummies/intercamio.png" alt="Intercambio Estudiantil" /></a>
+						<a id="intercambio" class="thumb"><img id="intercambioImg" alt="Intercambio Estudiantil" /></a>
 						<div class="post-head">
-							<a href="..\intercambio\index.html">Intercambio Estudiantil</a>
+							<a id="intercambioHead">Intercambio Estudiantil</a>
 						</div>
          			</div>
          		</div>
@@ -84,14 +84,14 @@
 				<div class="widget-block">
 					<h4>Aplicaciones Útiles</h4>
 					<div class="recent-post">
-						<a href="http://facultaddecienciasadministrativas.com/salas/" class="thumb"><img src="../img/dummies/salas.png" alt="Sistema de salas FCA" /></a>
+						<a href="http://facultaddecienciasadministrativas.com/salas/" class="thumb"><img id="salasImg" alt="Sistema de salas FCA" /></a>
 						<div class="post-head">
 							<a href="http://facultaddecienciasadministrativas.com/salas/">Sistema de salas FCA</a>
 						</div>
 						</div>
 						<div class="widget-block">
 					<div class="recent-post">
-						<a href="http://148.231.100.212/facultad/SSI/" class="thumb"><img src="../img/dummies/solicitud.png" alt="Solicitud de Sistemas Informáticos" /></a>
+						<a href="http://148.231.100.212/facultad/SSI/" class="thumb"><img id="ssiImg" alt="Solicitud de Sistemas Informáticos" /></a>
 						<div class="post-head">
 							<a href="http://148.231.100.212/facultad/SSI/">Solicitud de Sistemas Informáticos</a>
 						</div>
@@ -118,8 +118,56 @@
 </footer>
 <script type="text/javascript">
 	$(document).ready(function() {
+		/* ************** Primer Columna ************** */
+		/* **** Carga imagen y enlaces de seccion Examenes en footer haciendolo global **** */
 		$("#examenes").attr("href",$location+"/Nueva-FCA/Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf");
 			$("#examenesImg").attr("src",$location+"/Nueva-FCA/img/dummies/examen.png");
 		$("#examenesHead").attr("href",$location+"/Nueva-FCA/Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf");
+
+		/* **** Carga imagen y enlaces de seccion Horarios en footer haciendolo global **** */
+		//$("#horarios").attr("href",$location+"/Nueva-FCA/");
+			$("#horariosImg").attr("src",$location+"/Nueva-FCA/img/dummies/reloc.png");
+		//$("#horariosHead").attr("href",$location+"/Nueva-FCA/");
+
+		/* **** Carga imagen y enlaces de seccion Intersemestrales en footer haciendolo global **** */
+		$("#inter").attr("href",$location+"/Nueva-FCA/Documentos/convo2015-1.pdf");
+			$("#interImg").attr("src",$location+"/Nueva-FCA//img/dummies/inter.png");
+		$("#interHead").attr("href",$location+"/Nueva-FCA/Documentos/convo2015-1.pdf");
+
+		/* ************** Segunda Columna ************** */
+
+		/* **** Carga imagen de seccion Tutorias en footer haciendolo global **** */
+			$("#tutoriasImg").attr("src",$location+"/Nueva-FCA/img/dummies/tutorias.png");
+
+		/* **** Carga imagen de seccion Portal flexible en footer haciendolo global **** */
+			$("#flexibleImg").attr("src",$location+"/Nueva-FCA/img/dummies/flexible.png");
+
+		/* **** Carga imagen de seccion Portal academico en footer haciendolo global **** */
+			$("#academicoImg").attr("src",$location+"/Nueva-FCA/img/dummies/docentes.png");
+
+
+		/* ************** Tercer Columna ************** */
+
+		/* **** Carga imagen de seccion  en footer haciendolo global **** */
+			$("#difusionImg").attr("src",$location+"/Nueva-FCA/img/dummies/difucion.png");
+
+		/* **** Carga imagen y enlaces de seccion  en footer haciendolo global **** */
+		//$("#cultural").attr("href",$location+"/Nueva-FCA/");
+			$("#culturalImg").attr("src",$location+"/Nueva-FCA/img/dummies/cultura.png");
+		//$("#culturalHead").attr("href",$location+"/Nueva-FCA/");
+
+		/* **** Carga imagen y enlaces de seccion  en footer haciendolo global **** */
+		$("#intercambio").attr("href",$location+"/Nueva-FCA/intercambio/");
+			$("#intercambioImg").attr("src",$location+"/Nueva-FCA/img/dummies/intercamio.png");
+		$("#intercambioHead").attr("href",$location+"/Nueva-FCA/intercambio/");
+
+
+		/* ************** Cuarta Columna ************** */
+
+		/* **** Carga imagen de seccion  en footer haciendolo global **** */
+			$("#salasImg").attr("src",$location+"/Nueva-FCA/img/dummies/salas.png");
+
+		/* **** Carga imagen de seccion  en footer haciendolo global **** */
+			$("#ssiImg").attr("src",$location+"/Nueva-FCA/img/dummies/solicitud.png");
 	});
 </script>
