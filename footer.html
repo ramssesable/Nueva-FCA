@@ -7,19 +7,19 @@
 				<div class="widget-block">
 					<h4>Anuncios</h4>
 					<div class="recent-post">
-						<a href="../Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf" class="thumb"><img src="../img/dummies/examen.png" alt="Post" /></a>
+						<a id="examenes" class="thumb"><img id="examenesImg" alt="Exámenes" /></a>
 						<div class="post-head">
-							<a href="../Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf">Exámenes 2015-1</a>
+							<a id="examenesHead">Exámenes 2015-1</a>
 						</div>
 					</div>
 					<div class="recent-post">
-						<a href="#" class="thumb"><img src="../img/dummies/reloc.png" alt="Post" /></a>
+						<a href="#" class="thumb"><img src="../img/dummies/reloc.png" alt="Horarios" /></a>
 						<div class="post-head">
 							<a href="#">Horarios 2015-2</a>
 						</div>
 					</div>
 					<div class="recent-post">
-						<a href="../Documentos/convo2015-1.pdf" class="thumb"><img src="../img/dummies/inter.png" alt="Post" /></a>
+						<a href="../Documentos/convo2015-1.pdf" class="thumb"><img src="../img/dummies/inter.png" alt="Intersemestrales" /></a>
 						<div class="post-head">
 							<a href="../Documentos/convo2015-1.pdf">Intersemestrales</a>
 						</div>
@@ -32,21 +32,21 @@
 				<div class="widget-block">
 					<h4>Enlaces Docentes</h4>
 					<div class="recent-post">
-						<a href="http://tutorias.uabc.mx:8080/login.php" class="thumb"><img src="../img/dummies/tutorias.png" alt="Post" /></a>
+						<a href="http://tutorias.uabc.mx:8080/login.php" class="thumb"><img src="../img/dummies/tutorias.png" alt="Sistema de Tutorias" /></a>
 						<div class="post-head">
 							<a href="http://tutorias.uabc.mx:8080/login.php">Sistema de Tutorias</a>
 						</div>
                         </div>
 						<div class="recent-post">
-						<a href="http://flexible.mxl.uabc.mx/" class="thumb"><img src="../img/dummies/flexible.png" alt="Post" /></a>
+						<a href="http://flexible.mxl.uabc.mx/" class="thumb"><img src="../img/dummies/flexible.png" alt="Portal Flexible" /></a>
 						<div class="post-head">
 							<a href="http://flexible.mxl.uabc.mx/">Portal Flexible</a>
 						</div>
 						</div>
 						<div class="recent-post">
-						<a href="https://academicos.uabc.mx/" class="thumb"><img src="../img/dummies/docentes.png" alt="Post" /></a>
+						<a href="https://academicos.uabc.mx/" class="thumb"><img src="../img/dummies/docentes.png" alt="Portal Académico" /></a>
 						<div class="post-head">
-							<a href="https://academicos.uabc.mx/">Portal Academico</a>
+							<a href="https://academicos.uabc.mx/">Portal Académico</a>
 						</div>
 				</div>
 		    </div>
@@ -58,19 +58,19 @@
 					<div id="tweets" class="footer-col tweet">
          				<h4>Otras Coordinaciones</h4>
          				<div class="recent-post">
-						<a href="https://www.facebook.com/difusioneimagenfca?fref=ts" class="thumb"><img src="../img/dummies/difucion.png" alt="Post" /></a>
+						<a href="https://www.facebook.com/difusioneimagenfca?fref=ts" class="thumb"><img src="../img/dummies/difucion.png" alt="Difusión e´Imagen" /></a>
 						<div class="post-head">
 							<a href="https://www.facebook.com/difusioneimagenfca?fref=ts">Difusion e imagen</a>
 						</div>
                         </div>
 						<div class="recent-post">
-						<a href="#" class="thumb"><img src="../img/dummies/cultura.png" alt="Post" /></a>
+						<a href="#" class="thumb"><img src="../img/dummies/cultura.png" alt="Actividades Culturales" /></a>
 						<div class="post-head">
 							<a href="#">Actividades Culturales</a>
 						</div>
 						</div>
 						<div class="recent-post">
-						<a href="..\intercambio\index.html" class="thumb"><img src="../img/dummies/intercamio.png" alt="Post" /></a>
+						<a href="..\intercambio\index.html" class="thumb"><img src="../img/dummies/intercamio.png" alt="Intercambio Estudiantil" /></a>
 						<div class="post-head">
 							<a href="..\intercambio\index.html">Intercambio Estudiantil</a>
 						</div>
@@ -84,14 +84,14 @@
 				<div class="widget-block">
 					<h4>Aplicaciones Útiles</h4>
 					<div class="recent-post">
-						<a href="http://facultaddecienciasadministrativas.com/salas/" class="thumb"><img src="../img/dummies/salas.png" alt="Post" /></a>
+						<a href="http://facultaddecienciasadministrativas.com/salas/" class="thumb"><img src="../img/dummies/salas.png" alt="Sistema de salas FCA" /></a>
 						<div class="post-head">
 							<a href="http://facultaddecienciasadministrativas.com/salas/">Sistema de salas FCA</a>
 						</div>
 						</div>
 						<div class="widget-block">
 					<div class="recent-post">
-						<a href="http://148.231.100.212/facultad/SSI/" class="thumb"><img src="../img/dummies/solicitud.png" alt="Post" /></a>
+						<a href="http://148.231.100.212/facultad/SSI/" class="thumb"><img src="../img/dummies/solicitud.png" alt="Solicitud de Sistemas Informáticos" /></a>
 						<div class="post-head">
 							<a href="http://148.231.100.212/facultad/SSI/">Solicitud de Sistemas Informáticos</a>
 						</div>
@@ -116,3 +116,10 @@
 		
 	</div>
 </footer>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("#examenes").attr("href",$location+"/Nueva-FCA/Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf");
+			$("#examenesImg").attr("src",$location+"/Nueva-FCA/img/dummies/examen.png");
+		$("#examenesHead").attr("href",$location+"/Nueva-FCA/Documentos/examenes/CALENDARIO_DE_EXAMENES_2015-1.pdf");
+	});
+</script>

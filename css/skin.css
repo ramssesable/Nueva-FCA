@@ -61,6 +61,10 @@ header{
 
 nav a{ color: #E2E0D7; }
 
+nav a.especial { /*Creado por nosotros*/
+    color: #D5B94B;
+}
+
 #nav>li.current-menu-item>a,
 #nav>li.current_page_item>a{
 	color: #E2E0D7;
@@ -75,7 +79,8 @@ nav a{ color: #E2E0D7; }
 #nav>li ul li a:hover,
 #nav>li ul li:nth-child(even) a:hover{
 	background: #0A7444;
-	color: #fff;
+	color: #D5B94B;
+	font-weight: bold;
 }
 
 #nav>li ul li:nth-child(even) a{
