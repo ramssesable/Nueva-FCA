@@ -14,9 +14,12 @@ body a{ color: #444; }
 
 body a:hover,
 #top-widget-holder a:hover,
-#nav>li>a:hover,
 .project-heading .launch:hover{
 	color: #0A7444;
+}
+
+#nav>li>a:hover {/* Se cambio el color de el hover por un amarillo */
+	color: #D5B94B;
 }
 
 h1,h2,h3,h4,h5,h6,hbold{ color: #0A7444; } /* Agrege etiqueta hbold */
