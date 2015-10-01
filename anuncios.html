@@ -4,21 +4,21 @@
 		<div class="widget-block">
 			<h4>Últimas Noticias</h4>
 			<div class="recent-post">
-				<a href="#" class="thumb"><img src="../img/dummies/director.gif" alt="Post" /></a>
+				<a href="#" class="thumb"><img id="imagen1" /></a> <!-- LA imagen se cargara por script para poder hacerla global en la funcion de $(document).ready -->
 				<div class="post-head">
 					<a href="#">Director:
                     Dr. Raul Gonzalez Nuñez</a>
 				</div>
 			</div>
 			<div class="recent-post">
-				<a href="#" class="thumb"><img src="../img/dummies/sub.gif" alt="Post" /></a>
+				<a href="#" class="thumb"><img id="imagen2" /></a> <!-- LA imagen se cargara por script para poder hacerla global en la funcion de $(document).ready -->
 				<div class="post-head">
 					<a href="#">Subdirector:
                     M.ED. Gonzalo Llamas Banuelos</a>
 				</div>
 			</div>
 			<div class="recent-post">
-				<a href="#" class="thumb"><img src="../img/dummies/admin.gif" alt="Post" /></a>
+				<a href="#" class="thumb"><img id="imagen3" /></a> <!-- LA imagen se cargara por script para poder hacerla global en la funcion de $(document).ready -->
 				<div class="post-head">
 					<a href="#">Administradora:L.A.E. Betty Berruecos Saldaña</a>
 				</div>
@@ -69,3 +69,15 @@
  		
 	</li>	
 </ul>
+<script type="text/javascript">
+	$(document).ready(function() {
+		/* 
+		Cada imagen se cargara en esta seccion, tanto la Ubicacion de la imagen, como el texto alternativo.
+		Para cambiar la imagen solo se tiene que hacer referencia a la id en etiqueta "img" en donde querramos 
+		colocar la imagen de esta manera "$("#id")" seguido de la funcion de atributos ".attr("[atributo]","[Contenido del atributo]")"
+		*/
+		$("#imagen1").attr("src",$location+"/Nueva-FCA/img/dummies/director.gif").attr("alt","Director");
+		$("#imagen2").attr("src",$location+"/Nueva-FCA/img/dummies/sub.gif").attr("alt","Subdirector");
+		$("#imagen3").attr("src",$location+"/Nueva-FCA/img/dummies/admin.gif").attr("alt","Administradora");
+	});
+</script>
