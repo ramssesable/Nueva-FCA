@@ -17,6 +17,7 @@
 	</ul>
 	<div id="combo-holder"></div>
 </nav>
+
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#principal").attr("href",$location+"/Nueva-FCA/").html("Principal"); //Pagina principal se cargara en en la etiqueta li con id principal
@@ -25,6 +26,40 @@
 			$("#servicios").attr("href",$location+"/Nueva-FCA/cp-servicios/"); //Pagina de servicios electrónicos se cargara en en la etiqueta li con id servicios
 			$("#programasApoyo").attr("href",$location+"/Nueva-FCA/cp-programas/"); //Pagina de programas de apoyo se cargara en en la etiqueta li con id servicios
 		$("#librosypub").attr("href",$location+"/Nueva-FCA/cp-LibrosyPublicaciones/").html("Libros y Publicaciones"); //Pagina de libros y publicaciones se cargara en en la etiqueta li con id librosypub
+
+		//##########################################
+		// Create Combo Navi
+		//##########################################	
+			
+		// Create the dropdown base
+		$("<select id='comboNav' />").appendTo("#combo-holder");
+		
+		// Create default option "Go to..."
+		$("<option />", {
+			"selected": "selected",
+			"value"   : $location+"/Nueva-FCA",
+			"text"    : "Principal"
+		}).appendTo("#combo-holder select");
+		
+		// Populate dropdown with menu items
+		$("#nav a").each(function() {
+			var el = $(this);		
+			var label = $(this).parent().parent().attr('id');
+			var sub = (label == 'nav') ? '' : '- ';
+			
+			$("<option />", {
+			 "value"   : el.attr("href"),
+			 "text"    :  sub + el.text()
+			}).appendTo("#combo-holder select");
+		});
+		 
+		//##########################################
+		// Combo Navigation action
+		//##########################################
+		
+		$("#comboNav").change(function() {
+		  location = this.options[this.selectedIndex].value;
+		});
 	});
 	function crearSubMenuLicenciaturas() {
 		//Seccion licenciaturas
