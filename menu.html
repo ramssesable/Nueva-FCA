@@ -12,7 +12,7 @@
 								<li><a id="programasApoyo"href="/Nueva-FCA/cp-programas/index.html">Programas de Apoyo</a></li>
 							</ul>
 		<li><a id="librosypub"></a></li>
-		<li><a class="especial" href="#">Transparencia</a></li>
+		<li id="transparencia"><a class="especial" href="#">Transparencia</a></li>
 		<li><a href="http://www.uabc-fca.com/posgrado/">Posgrado</a></li>
 	</ul>
 	<div id="combo-holder"></div>
@@ -21,8 +21,9 @@
 <script type="text/javascript">
 	$(document).ready(function() {
 		$("#principal").attr("href",$location+"/Nueva-FCA/").html("Principal"); //Pagina principal se cargara en en la etiqueta li con id principal
-		crearSubMenuInstitucional() // Crea el sub menú institucional
-		crearSubMenuLicenciaturas() // Crea el sub menú licenciaturas
+		crearSubMenuInstitucional(); // Crea el sub menú institucional
+		crearSubMenuLicenciaturas(); // Crea el sub menú licenciaturas
+		crearSubMenuTransparencia();
 			$("#servicios").attr("href",$location+"/Nueva-FCA/cp-servicios/"); //Pagina de servicios electrónicos se cargara en en la etiqueta li con id servicios
 			$("#programasApoyo").attr("href",$location+"/Nueva-FCA/cp-programas/"); //Pagina de programas de apoyo se cargara en en la etiqueta li con id servicios
 		$("#librosypub").attr("href",$location+"/Nueva-FCA/cp-LibrosyPublicaciones/").html("Libros y Publicaciones"); //Pagina de libros y publicaciones se cargara en en la etiqueta li con id librosypub
@@ -112,15 +113,23 @@
 		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/ManualdeFunciones.html").html("> Manual de Funciones").appendTo($renglon);
 		$renglon.appendTo($listaInstitucional);
 		var $renglon 			= $("<li/>");
-		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/PlandeDesarrolloInstitucional.html").html("> Plan de Desarrollo Institucional 2015-2019").appendTo($renglon);
-		$renglon.appendTo($listaInstitucional);
-		var $renglon 			= $("<li/>");
 		var $_renglon			= $("<a/>").attr("href","http://www.uabc.mx/formacionbasica/modeloedu.htm").html("> Modelo educativo").appendTo($renglon);
-		$renglon.appendTo($listaInstitucional);
-		var $renglon 			= $("<li/>");
-		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/Curriculums.html").html("> Curriculums Directivos").appendTo($renglon);
 		$renglon.appendTo($listaInstitucional);
 
 		$listaInstitucional.appendTo("#institucional");//se pasa la lista completa al la seccion institucional en el menú
+	}
+
+	function crearSubMenuTransparencia() {
+		//Seccion licenciaturas
+		var $listaTransparencia = $("<ul/>");// se guarda la etiqueta "ul" en la variable
+
+		var $renglon 			= $("<li/>");// se guarda un renglon o la etiqueta "li" en la variable
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/PlandeDesarrolloInstitucional.html").html("> Plan de Desarrollo Institucional 2015-2019").appendTo($renglon);// se guarda el enlace en la variable en una etiqueta "a" y se pasa a el renglon toda la etiqueta "a"
+		$renglon.appendTo($listaTransparencia);// Se pasa el renglon completo con junto con la etiqeuta "a" a la variable de la lista con la etiqueta "ul"
+		var $renglon 			= $("<li/>");
+		var $_renglon			= $("<a/>").attr("href",$location+"/Nueva-FCA/Cp-institucional/Curriculums.html").html("> Curriculums Directivos").appendTo($renglon);
+		$renglon.appendTo($listaTransparencia);
+		
+		$listaTransparencia.appendTo("#transparencia");//se pasa la lista completa al la seccion licenciaturas en el menú
 	}
 </script>
