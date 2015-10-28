@@ -7,6 +7,12 @@
 
 /* GENERAL ------------------------------------------------------------*/
 
+/* Extra -----------------------------*/
+iframe {
+	width: 100%;
+}
+/* Extra -----------------------------*/
+
 article, aside, canvas, figure, figure img, figcaption, hgroup,
 footer, header, nav, section, audio, video {
 	display: block;
