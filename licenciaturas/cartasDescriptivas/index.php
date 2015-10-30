@@ -95,7 +95,8 @@
 				<!-- page content -->
 	        	<div id="page-content" class="clearfix">
 
-				</div>	        	
+				</div>
+				<div id="mensaje"></div>
 	        	<!--  page content-->
 	        	
 	        	
@@ -119,38 +120,35 @@
 				//
 				var procedencia = <?php echo $_GET['procedencia']; ?>;
 				switch (procedencia) {
-					case 'conta':
+					case 1:
 						var accordion	= $("<object/>").attr("data","conta.html").attr("type","text/html").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
-					case 'merca':
+					case 2:
 						var accordion	= $("<iframe/>").attr("src","merca.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
-					case 'negocios':
+					case 3:
 						var accordion	= $("<iframe/>").attr("src","negocios.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
-					case 'info':
+					case 4:
 						var accordion	= $("<iframe/>").attr("src","info.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
-					case 'turistica':
+					case 5:
 						var accordion	= $("<iframe/>").attr("src","turistica.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
-					case 'admin':
+					case 6:
 						var accordion	= $("<iframe/>").attr("src","admin.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
-					case 'tronco':
+					case 99:
 						var accordion	= $("<iframe/>").attr("src","tronco.html").attr("scrolling","no");
 						accordion.appendTo("#page-content");
 						break;
 				}
-				$("object").change(function() {
-					$("object").attr("width","100%");
-				});
 				
 			});
 		</script>
