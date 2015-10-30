@@ -3,8 +3,8 @@
 
 	<head>
 		<meta charset="utf-8"/>
-		<title>L. C.</title>
-    	<meta name="description" content="UABC FCA Licenciado en Contaduría"/>
+		<title>Cartas Descriptivas FCA</title>
+    	<meta name="description" content="UABC FCA Cartas descriptivas"/>
 		
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -94,8 +94,6 @@
 	        	
 				<!-- page content -->
 	        	<div id="page-content" class="clearfix">
-					
-					<iframe src="prueba.html" scrolling="no"></iframe>
 
 				</div>	        	
 	        	<!--  page content-->
@@ -117,6 +115,43 @@
 				$("#anuncios").load($location+"/Nueva-FCA/anuncios.html"); //Carga los anuncios desde el archivo anuncios.html
 				$("#menu").load($location+"/Nueva-FCA/menu.html"); //Carga el menu desde el archivo menu.html
 				$("#footer").load($location+"/Nueva-FCA/footer.html"); //Carga el footer desde el archivo footer.html
+
+				//
+				var procedencia = <?php echo $_GET['procedencia']; ?>;
+				switch (procedencia) {
+					case 'conta':
+						var accordion	= $("<object/>").attr("data","conta.html").attr("type","text/html").css("width","100%").css("min-height","720px");
+						accordion.appendTo("#page-content");
+						break;
+					case 'merca':
+						var accordion	= $("<iframe/>").attr("src","merca.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+					case 'negocios':
+						var accordion	= $("<iframe/>").attr("src","negocios.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+					case 'info':
+						var accordion	= $("<iframe/>").attr("src","info.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+					case 'turistica':
+						var accordion	= $("<iframe/>").attr("src","turistica.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+					case 'admin':
+						var accordion	= $("<iframe/>").attr("src","admin.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+					case 'tronco':
+						var accordion	= $("<iframe/>").attr("src","tronco.html").attr("scrolling","no");
+						accordion.appendTo("#page-content");
+						break;
+				}
+				$("object").change(function() {
+					$("object").attr("width","100%");
+				});
+				
 			});
 		</script>
 	</body>
