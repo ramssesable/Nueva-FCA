@@ -125,27 +125,27 @@
 						accordion.appendTo("#page-content");
 						break;
 					case 2:
-						var accordion	= $("<iframe/>").attr("src","merca.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","merca.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 					case 3:
-						var accordion	= $("<iframe/>").attr("src","negocios.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","negocios.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 					case 4:
-						var accordion	= $("<iframe/>").attr("src","info.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","info.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 					case 5:
-						var accordion	= $("<iframe/>").attr("src","turistica.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","turistica.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 					case 6:
-						var accordion	= $("<iframe/>").attr("src","admin.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","admin.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 					case 99:
-						var accordion	= $("<iframe/>").attr("src","tronco.html").attr("scrolling","no");
+						var accordion	= $("<iframe/>").attr("src","info.html").attr("scrolling","no").css("width","100%").css("min-height","720px");
 						accordion.appendTo("#page-content");
 						break;
 				}
