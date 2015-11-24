@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<!-- Slice box (slider) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="../css/slicebox/demo.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slicebox/slicebox.css" />
+    <link rel="stylesheet" type="text/css" href="../css/slicebox/custom.css" />
+    <script type="text/javascript" src="../js/slicebox/modernizr.custom.46884.js"></script>
+	</head>
+	<body>
+		<div class="container">
+      <div class="wrapper">
+
+        <ul id="sb-slider" class="sb-slider">
+          <li>
+              <a href="http://www.flickr.com/photos/strupler/2969141180" target="_blank"><img src="../img/slides/01.jpg" alt="image1"/></a>
+              <div class="sb-description">
+                <h3>Creative Lifesaver</h3>
+              </div>
+            </li>
+            <li>
+              <a href="http://www.flickr.com/photos/strupler/2968268187" target="_blank"><img src="../img/slides/02.jpg" alt="image2"/></a>
+              <div class="sb-description">
+                <h3>Honest Entertainer</h3>
+              </div>
+            </li>
+            <li>
+              <a href="http://www.flickr.com/photos/strupler/2968114825" target="_blank"><img src="../img/slides/03.jpg" alt="image1"/></a>
+              <div class="sb-description">
+                <h3>Brave Astronaut</h3>
+              </div>
+            </li>
+            <li>
+              <a href="http://www.flickr.com/photos/strupler/2968122059" target="_blank"><img src="../img/slides/04.jpg" alt="image1"/></a>
+              <div class="sb-description">
+                <h3>Affectionate Decision Maker</h3>
+              </div>
+            </li>
+        </ul>
+
+        <div id="shadow" class="shadow"></div>
+
+        <div id="nav-arrows" class="nav-arrows">
+          <a href="#">Next</a>
+          <a href="#">Previous</a>
+        </div>
+
+        <div id="nav-options" class="nav-options">
+          <span id="navPlay">Play</span>
+          <span id="navPause">Pause</span>
+        </div>
+
+      </div><!-- /wrapper -->
+    </div>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/slicebox/jquery.slicebox.js"></script>
+    <script type="text/javascript">
+      $(function() {
+        var cont = 0;
+        // for (var i = 1; i <= 4 ; i++) {
+        //   $_renglon     = $("<li>");
+        //   //$_enlace    = $("<a>").attr("href","img/"+i+".jpg").attr("target","_blank");
+        //   $_enlace    = $("<a>").attr("href","http://www.flickr.com/photos/strupler/2969141180").attr("target","_blank");
+        //   $_imagen    = $("<img>").attr("src","http://www.flickr.com/photos/strupler/2969141180").attr("alt","Activate "+i).appendTo($_enlace);
+        //   $_enlace.appendTo($_renglon);
+        //   $_descripcion = $("<div>").addClass("sb-description");
+        //   $__descripcion  = $("<h3>").html("Activate - Sinergia").appendTo($_descripcion);
+        //   $_descripcion.appendTo($_renglon);
+        //   $_renglon.appendTo("#sb-slider");
+        // };
+        
+        
+        var Page = (function() {
+
+          var $navArrows = $( '#nav-arrows' ).hide(),
+            $navOptions = $( '#nav-options' ).hide(),
+            $shadow = $( '#shadow' ).hide(),
+            slicebox = $( '#sb-slider' ).slicebox( {
+              onReady : function() {
+
+                $navArrows.show();
+                $navOptions.show();
+                $shadow.show();
+
+              }
+              ,orientation : 'v'
+              ,cuboidsCount : 1
+              ,interval : 4500
+              ,autoplay : true
+              ,disperseFactor : 30
+            } ),
+            
+            init = function() {
+
+              initEvents();
+              
+            },
+            initEvents = function() {
+
+              // add navigation events
+              $navArrows.children( ':first' ).on( 'click', function() {
+
+                slicebox.next();
+                return false;
+
+              } );
+
+              $navArrows.children( ':last' ).on( 'click', function() {
+                
+                slicebox.previous();
+                return false;
+
+              } );
+
+              $( '#navPlay' ).on( 'click', function() {
+                
+                slicebox.play();
+                return false;
+
+              } );
+
+              $( '#navPause' ).on( 'click', function() {
+                
+                slicebox.pause();
+                return false;
+
+              } );
+
+            };
+
+            return { init : init };
+
+        })();
+
+        Page.init();
+
+      });
+    </script>
+	</body>
+</html>
